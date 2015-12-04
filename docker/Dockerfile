@@ -12,7 +12,7 @@ ADD ./privkey.pem /var/toughradius/privkey.pem
 ADD ./cacert.pem /var/toughradius/cacert.pem
 
 
-RUN git clone -b master https://github.com/davislidaqing/PayRADIUS.git /opt/toughradius
+RUN git clone -b master https://github.com/davislidaqing/Mcoderadius.git /opt/toughradius
 RUN ln -s /opt/toughradius/toughctl /usr/bin/toughctl && chmod +x /usr/bin/toughctl
 
 RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
