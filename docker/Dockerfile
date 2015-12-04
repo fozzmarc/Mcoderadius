@@ -1,4 +1,4 @@
-FROM centos:centos7
+FROM daocloud.io/centos:7
 MAINTAINER ldq <583037724@qq.com>
 
 
