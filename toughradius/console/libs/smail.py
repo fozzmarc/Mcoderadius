@@ -6,6 +6,7 @@ import smtplib
 from email.mime.text import MIMEText
 from email.header import Header
 
+
 class Mail(object):
     
     def setup(self,server=None,user=None,pwd=None,fromaddr=None,sender=None):
