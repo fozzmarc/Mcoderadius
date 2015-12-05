@@ -1,5 +1,5 @@
 FROM centos:centos7
-MAINTAINER jamiesun <jamiesun.net@gmail.com>
+MAINTAINER tutu <583037724@qq.com>
 
 
 ADD ./radiusd.conf /etc/radiusd.conf
@@ -35,7 +35,7 @@ RUN pip install pycrypto==2.6.1
 RUN pip install pyOpenSSL>=0.14
 RUN pip install service_identity
 
-RUN git clone -b master https://github.com/davislidaqing/ToughRADIUS.git /opt/toughradius
+RUN git clone -b master https://github.com/davislidaqing/Mcoderadius.git /opt/toughradius
 RUN ln -s /opt/toughradius/toughctl /usr/bin/toughctl && chmod +x /usr/bin/toughctl
 RUN /opt/toughradius/toughctl --initdb
 
