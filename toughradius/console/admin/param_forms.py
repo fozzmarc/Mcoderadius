@@ -11,7 +11,7 @@ sys_form = pyforms.Form(
     pyforms.Textbox("system_name", description=u"管理系统名称",help=u"管理系统名称,可以根据你的实际情况进行定制", **input_style),
     pyforms.Textbox("customer_system_name", description=u"自助服务系统名称", **input_style),
     pyforms.Textbox("customer_system_url", description=u"自助服务系统网站地址", **input_style),
-    pyforms.Dropdown("online_support", args=booleans.items(), description=u"开启在线支持功能",help=u"开启此项，可以随时向ToughRADIUS开发团队反馈问题", **input_style),
+    pyforms.Dropdown("online_support", args=booleans.items(), description=u"开启在线支持功能",help=u"开启此项，可以随时向RADIUS开发团队反馈问题", **input_style),
     pyforms.Textbox("ticket_expire_days", description=u"上网日志保留天数", **input_style),
     pyforms.Dropdown("is_debug", args=booleans.items(), description=u"开启DEBUG",help=u"开启此项，可以获取更多的系统日志纪录", **input_style),
     pyforms.Button("submit", type="submit", html=u"<b>更新</b>", **button_style),
