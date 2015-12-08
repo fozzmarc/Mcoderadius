@@ -156,7 +156,7 @@ exit 0
 
 def echo_mysql_cnf():
     return '''[client]
-port		= 3306
+port		= 3308
 socket		= /var/run/mysqld/mysqld.sock
 
 [mysqld_safe]
@@ -167,7 +167,7 @@ nice		= 0
 user		= mysql
 pid-file	= /var/run/mysqld/mysqld.pid
 socket		= /var/run/mysqld/mysqld.sock
-port		= 3306
+port		= 3308
 basedir		= /usr
 datadir		= /var/lib/mysql
 tmpdir		= /tmp
