@@ -630,7 +630,8 @@ class AcctPacket2(AcctPacket):
         return int(tl.to_integral_value())   
         
     def get_output_total(self):
-        bl = decimal.Decimal(self.get_acct_output_octets())/decimal.Decimal(1024)
+        bl = decimal.Decimal(self.get_acct_output_octets())*decimal.Decimal(1024)/100
+        #bl = decimal.Decimal(self.get_acct_output_octets())/decimal.Decimal(1024)
         gl = decimal.Decimal(self.get_acct_output_gigawords())*decimal.Decimal(4*1024*1024)
         tl = bl + gl
         return int(tl.to_integral_value())   
