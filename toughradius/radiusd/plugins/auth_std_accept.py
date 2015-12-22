@@ -60,10 +60,12 @@ def process(req=None,resp=None,user=None,radiusd=None,**kwargs):
             session_timeout = _session_timeout
 
     resp['Session-Timeout'] = session_timeout
-
+    resp['Balance_Acct'] = store.get_user_balance(user['account_number'])
+    resp['Flow_Transaction'] = user['flow_length']
+    #resp['Rate_Transaction'] = user['fee_price']
     if user['ip_address']:
         resp['Framed-IP-Address'] = user['ip_address']
-
+    
     _attrs = {}
     for attr in store.get_product_attrs(user['product_id']):
         try:

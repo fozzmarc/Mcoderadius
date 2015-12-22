@@ -147,6 +147,12 @@ ATTRIBUTE	Login-IPv6-Host		98	octets	# really IPv6
 ATTRIBUTE	Framed-IPv6-Route	99	string
 ATTRIBUTE	Framed-IPv6-Pool	100	string
 
+ATTRIBUTE	Balance_Acct			151	integer
+ATTRIBUTE	Flow_Transaction		152	integer
+ATTRIBUTE	Rate_Transaction		153	integer
+ATTRIBUTE	Single_limit			154	integer
+
+
 ATTRIBUTE	Digest-Response		206	string
 ATTRIBUTE	Digest-Attributes	207	octets	# stupid format
 
