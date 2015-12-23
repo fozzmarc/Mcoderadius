@@ -71,8 +71,8 @@ ATTRIBUTE	NAS-IP-Address		4	ipaddr
 ATTRIBUTE	NAS-Port		5	integer
 ATTRIBUTE	Service-Type		6	integer
 ATTRIBUTE	Framed-Protocol		7	integer
-ATTRIBUTE	Framed-IP-Address	8	ipaddr
-ATTRIBUTE	Framed-IP-Netmask	9	ipaddr
+ATTRIBUTE	Framed-IP-Address	8	integer
+ATTRIBUTE	Framed-IP-Netmask	9	integer
 ATTRIBUTE	Framed-Routing		10	integer
 ATTRIBUTE	Filter-Id		11	string
 ATTRIBUTE	Framed-MTU		12	integer
