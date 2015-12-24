@@ -20,17 +20,17 @@ def process(req=None,resp=None,user=None,radiusd=None,**kwargs):
     elif acct_policy in (PPTimes,PPFlow):
         user_balance = store.get_user_balance(user['account_number'])
         if user_balance <= 0:
-            return error_auth(resp,'user balance poor')    
+            return error_auth(resp,'user_balance=0')
             
     elif acct_policy == BOTimes:
         time_length = store.get_user_time_length(user['account_number'])
         if time_length <= 0:
-            return error_auth(resp,'user time_length poor')
+            return error_auth(resp,'user_time_length=0')
             
     elif acct_policy == BOFlows:
         flow_length = store.get_user_flow_length(user['account_number'])
         if flow_length <= 0:
-            return error_auth(resp,'user flow_length poor')
+            return error_auth(resp,'user_flow_length=0')
 
     if user['user_concur_number'] > 0 :
         if store.count_online(user['account_number']) == user['user_concur_number']:
