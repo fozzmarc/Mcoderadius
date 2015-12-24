@@ -61,7 +61,7 @@ def process(req=None,resp=None,user=None,radiusd=None,**kwargs):
 
     resp['Session-Timeout'] = session_timeout
     resp['Balance_Acct'] = store.get_user_balance(user['account_number'])
-    resp['Flow_Transaction'] = user['flow_length']/1024
+    resp['Flow_Transaction'] = user['flow_length']*100/1024
     #resp['Rate_Transaction'] = user['fee_price']
     if user['ip_address']:
         resp['Framed-IP-Address'] = user['ip_address']
