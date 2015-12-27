@@ -127,8 +127,8 @@ def process(req=None,user=None,radiusd=None,**kwargs):
         billing_output_total = decimal.Decimal(online['output_total'])
         acct_flows = output_total - billing_output_total
         fee_price = decimal.Decimal(product['fee_price'])
-        usedfee = acct_flows/decimal.Decimal(1024) * fee_price
-        usedfee = actual_fee = int(usedfee.to_integral_value())
+        usedfee = acct_flows/decimal.Decimal(1024)/10 * fee_price
+        usedfee = actual_fee = round(usedfee,2)
         balance = user_balance - usedfee
         
         if balance < 0 :  

@@ -129,12 +129,12 @@ def sec2hour(sec=0):
 
 def fen2yuan(fen=0):
     f = decimal.Decimal(fen or 0)
-    y = f / decimal.Decimal(1000)
-    return str(y.quantize(decimal.Decimal('1.000')))
+    y = f / decimal.Decimal(100)
+    return str(y.quantize(decimal.Decimal('1.00')))
 
 def yuan2fen(yuan=0):
     y = decimal.Decimal(yuan or 0)
-    f = y * decimal.Decimal(1000)
+    f = y * decimal.Decimal(100)
     return int(f.to_integral_value())
 
 def get_currtime():
