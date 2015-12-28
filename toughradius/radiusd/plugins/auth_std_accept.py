@@ -35,6 +35,8 @@ def process(req=None,resp=None,user=None,radiusd=None,**kwargs):
     acct_interim_intelval = int(store.get_param("acct_interim_intelval"))
     if acct_interim_intelval > 0:
         resp['Acct-Interim-Interval'] = acct_interim_intelval
+
+    resp['codebymarcli'] = "addbymarc"
     
     acct_policy = user['product_policy'] or BOMonth
     product = store.get_product(user['product_id'])
