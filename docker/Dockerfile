@@ -4,6 +4,7 @@ MAINTAINER tutu <583037724@qq.com>
 RUN echo "Hello"
 RUN pwd
 RUN echo "World"
+
 ADD ./radiusd.conf /etc/radiusd.conf
 ADD ./supervisord.conf /etc/supervisord.conf
 ADD ./toughrad /usr/bin/toughrad
