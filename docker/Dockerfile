@@ -5,6 +5,8 @@ RUN echo "Hello"
 RUN pwd
 RUN echo "World"
 
+RUN cd docker
+
 ADD ./radiusd.conf /etc/radiusd.conf
 ADD ./supervisord.conf /etc/supervisord.conf
 ADD ./toughrad /usr/bin/toughrad
